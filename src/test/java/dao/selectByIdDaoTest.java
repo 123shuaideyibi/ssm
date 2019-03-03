@@ -20,7 +20,8 @@ public class selectByIdDaoTest {
 
     @Test
     public void testSelectById(){
-        System.out.println("aaa");
+        System.out.println("dao测试开始");
         System.out.println(userMapper.selectById(1));
+        System.out.println("dao测试结束");
     }
 }
