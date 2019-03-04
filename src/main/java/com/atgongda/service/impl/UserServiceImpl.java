@@ -16,14 +16,15 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Override
-    public User selectById(int id) {
-        return userMapper.selectById(id);
-    }
 
     @Override
     public User selectUserByUserName(String username) {
         return userMapper.selectUserByUserName(username);
+    }
+
+    @Override
+    public boolean insertUser(User user) {
+        return userMapper.insertUser(user);
     }
 
 

@@ -7,19 +7,10 @@ import java.io.Serializable;
  * @date 2019/03/03/19:26
  */
 public class User implements Serializable {
-    /**
-     * 用户id
-     */
-    private Long id;
-    /**
-     * 用户名
-     */
-    private String username;
-    /**
-     * 用户密码
-     */
-    private String password;
 
+    private Long id;
+    private String username;
+    private String password;
 
     @Override
     public String toString() {

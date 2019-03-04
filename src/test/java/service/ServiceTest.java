@@ -1,5 +1,6 @@
 package service;
 
+import com.atgongda.entity.User;
 import com.atgongda.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,18 +23,32 @@ public class ServiceTest {
     @Autowired
     private UserService userService;
 
+
+    /**
+     * 1、登录时通过用户名来确认用户名是否存在
+     */
     @Test
-    public void selectUserById(){
+    public void selectUserByUserName() {
         System.out.println("service测试开始。。。。");
-        System.out.println(userService.selectById(2));
+
+        System.out.println(userService.selectUserByUserName("张三"));
+
         System.out.println("service测试结束。。。。");
     }
 
-    @Test
-    public void selectUserByUserName() {
-        System.out.println("dao测试开始。。。。");
-        System.out.println(userService.selectUserByUserName("张三"));
-        System.out.println("dao测试结束。。。。");
-    }
 
+    /**
+     * 2、注册时往user表里面插入用户名和密码
+     */
+    @Test
+    public void insertUser(){
+        System.out.println("service测试开始。。。。");
+
+        User user = new User();
+        user.setUsername("王浩");
+        user.setPassword("123");
+        System.out.println(userService.insertUser(user));
+
+        System.out.println("service测试结束。。。。");
+    }
 }

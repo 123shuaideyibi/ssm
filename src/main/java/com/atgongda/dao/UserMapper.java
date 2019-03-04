@@ -9,13 +9,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface UserMapper {
 
-    /**
-     * 通过id查询用户的所有信息
-     * @param id
-     * @return
-     */
-    User selectById(@Param("id") int id);
-
 
     /**
      * 通过用户名查询用户信息
@@ -25,8 +18,6 @@ public interface UserMapper {
     User selectUserByUserName(@Param("username") String username);
 
 
-
-
-
+    boolean insertUser(User user);
 
 }
