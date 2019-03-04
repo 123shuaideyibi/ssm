@@ -20,7 +20,7 @@
         <init-param>
             <!--上下文配置的位置的制定-->
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring/spring-mvc.xml</param-value>
+            <param-value>classpath:spring/spring-*.xml</param-value>
         </init-param>
     </servlet>
 

@@ -16,4 +16,17 @@ public interface UserMapper {
      */
     User selectById(@Param("id") int id);
 
+
+    /**
+     * 通过用户名查询用户信息
+     * @param username
+     * @return
+     */
+    User selectUserByUserName(@Param("username") String username);
+
+
+
+
+
+
 }

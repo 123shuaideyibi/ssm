@@ -17,14 +17,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-service.xml"})
-public class selectByIdServiceTest {
+public class ServiceTest {
 
     @Autowired
     private UserService userService;
 
     @Test
-    public void testSelectById(){
+    public void selectUserById(){
+        System.out.println("service测试开始。。。。");
         System.out.println(userService.selectById(2));
+        System.out.println("service测试结束。。。。");
+    }
+
+    @Test
+    public void selectUserByUserName() {
+        System.out.println("dao测试开始。。。。");
+        System.out.println(userService.selectUserByUserName("张三"));
+        System.out.println("dao测试结束。。。。");
     }
 
 }
