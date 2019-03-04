@@ -12,11 +12,10 @@
 </head>
 <body>
 
-    <form action="/test" method="post">
-        <input type="text" name="username" />
-        <input type="password" name="password"/>
-        <button type="submit" value="上传"/>
-    </form>
-
+<form action="${ctx}/user/login" method="post">
+    <input type="text" name="username"><br>
+    <input type="password" name="password"><br>
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>

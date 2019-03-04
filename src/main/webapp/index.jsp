@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="test.jsp">点击进入测试页面</a>
+    <a href="login.jsp">点击进入测试页面</a>
 </body>
 </html>
