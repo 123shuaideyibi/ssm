@@ -35,15 +35,14 @@ public class UserController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam("username") String username, @RequestParam("password") String password, HttpServletRequest request, Model model) {
-        System.out.println("你的用户名：" + username + "；你的密码是：" + password);
         User user = userService.selectUserByUserName(username);
         if (user != null) {
             if (user.getPassword().equals(password)) {
                 System.out.println("登录成功");
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
-                model.addAttribute("state", "success");
-                model.addAttribute("message", "登录成功");
+
+                model.addAttribute("state","登录成功");
                 return "loginSuccess";
             } else {
                 System.out.println("用户名或密码错误");
