@@ -68,7 +68,7 @@ public class UserController {
 
         boolean flag = userService.insertUser(user);
         System.out.println(flag);
-        return null;
+        return "registerSuccess";
     }
 
 }

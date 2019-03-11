@@ -5,7 +5,7 @@
 </head>
 <body>
 <button id="demo" onclick="">按钮</button>
-<form action="${ctx}/user/register" method="post" id="form" class="form">
+<form action="${ctx}/user/register" method="post">
     <table border="0" align="center">
         <caption>
             用户注册
